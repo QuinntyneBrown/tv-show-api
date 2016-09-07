@@ -8,6 +8,8 @@ namespace TvShowApi.Data
         IRepository<Season> Seasons { get; }
         IRepository<Episode> Episodes { get; }
         IRepository<DigitalAsset> DigitalAssets { get; }
+        IRepository<User> Users { get; }
+        IRepository<Role> Roles { get; }
         void SaveChanges();
     }
 }

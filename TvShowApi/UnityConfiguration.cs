@@ -24,6 +24,8 @@ namespace TvShowApi
             container.RegisterType<ISeasonService, SeasonService>();
             container.RegisterType<IEpisodeService, EpisodeService>();
             container.RegisterType<IDigitalAssetService, DigitalAssetService>();
+            container.RegisterType<IUserService, UserService>();
+            container.RegisterType<IRoleService, RoleService>();
             container.RegisterInstance(AuthConfiguration.LazyConfig);            
             return container;
         }

@@ -30,7 +30,8 @@ namespace TvShowApi.Data
         public IRepository<Season> Seasons { get { return GetStandardRepo<Season>(); } }
         public IRepository<Episode> Episodes { get { return GetStandardRepo<Episode>(); } }
         public IRepository<DigitalAsset> DigitalAssets { get { return GetStandardRepo<DigitalAsset>(); } }
-
+        public IRepository<User> Users { get { return GetStandardRepo<User>(); } }
+        public IRepository<Role> Roles { get { return GetStandardRepo<Role>(); } }
 
         protected void ConfigureDbContext(IDbContext dbContext)
         {

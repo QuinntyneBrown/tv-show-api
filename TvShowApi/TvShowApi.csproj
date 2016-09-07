@@ -207,10 +207,12 @@
     <Compile Include="Models\DigitalAsset.cs" />
     <Compile Include="Models\Episode.cs" />
     <Compile Include="Models\EpisodeDigitalAsset.cs" />
+    <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Season.cs" />
     <Compile Include="Models\SeasonDigitalAsset.cs" />
     <Compile Include="Models\TvShow.cs" />
     <Compile Include="Models\TvShowDigitalAsset.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\TvShowService.cs" />
     <Compile Include="Services\Cache.cs" />
@@ -250,6 +252,18 @@
     <Compile Include="Controllers\SeasonController.cs" />
     <Compile Include="Controllers\EpisodeController.cs" />
     <Compile Include="Controllers\DigitalAssetController.cs" />
+    <Compile Include="Dtos\UserDto.cs" />
+    <Compile Include="Dtos\UserAddOrUpdateRequestDto.cs" />
+    <Compile Include="Dtos\UserAddOrUpdateResponseDto.cs" />
+    <Compile Include="Dtos\RoleDto.cs" />
+    <Compile Include="Dtos\RoleAddOrUpdateRequestDto.cs" />
+    <Compile Include="Dtos\RoleAddOrUpdateResponseDto.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="Services\IUserService.cs" />
+    <Compile Include="Services\RoleService.cs" />
+    <Compile Include="Services\IRoleService.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
