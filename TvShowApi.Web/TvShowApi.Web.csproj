@@ -6,8 +6,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>
-    </ProductVersion>
+    <ProductVersion></ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{658DA84D-AD6C-414A-9333-B89232911187}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -22,8 +21,12 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <NuGetPackageImportStamp></NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <TypeScriptEmitDecoratorMetadata>true</TypeScriptEmitDecoratorMetadata>
+    <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
+    <TypeScriptExperimentalDecorators>True</TypeScriptExperimentalDecorators>
+    <TypeScritModuleResolution>Classic</TypeScritModuleResolution>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -192,13 +195,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="libs\jquery.min.js" />
+    <Content Include="libs\slick.min.js" />
     <Content Include="packages.config" />
+    <Content Include="file.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="src\app\components\digital-asset-upload.component.html">
+      <DependentUpon>digital-asset-upload.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\digital-asset-upload.component.scss">
+      <DependentUpon>digital-asset-upload.component.ts</DependentUpon>
+    </Content>
+    <Content Include="tsconfig.json" />
+    <Content Include="typings.json" />
+    <Content Include="typedoc.json" />
+    <Content Include="src\app\app.component.scss" />
+    <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\pages\home-page.component.scss" />
+    <Content Include="src\app\pages\home-page.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
@@ -216,7 +235,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\app\" />
+    <Folder Include="src\app\models\" />
+    <Folder Include="src\app\store\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -236,8 +256,7 @@
           <IISUrl>http://localhost:56622/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
+          <CustomServerUrl></CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
@@ -257,4 +276,47 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\index.ts" />
+    <TypeScriptCompile Include="src\app\constants\add-tv-show-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\get-tv-show-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\remove-tv-show-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\index.ts" />
+    <TypeScriptCompile Include="src\app\constants\add-episode-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\get-episode-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\remove-episode-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\add-season-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\get-season-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\remove-season-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\add-digital-asset-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\get-digital-asset-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\remove-digital-asset-success.action.ts" />
+    <TypeScriptCompile Include="src\app\actions\tv-show.actions.ts" />
+    <TypeScriptCompile Include="src\app\actions\season.actions.ts" />
+    <TypeScriptCompile Include="src\app\actions\episode.actions.ts" />
+    <TypeScriptCompile Include="src\app\actions\digital-asset.actions.ts" />
+    <TypeScriptCompile Include="src\app\actions\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\digital-asset\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\episode\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\season\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\tv-show\index.ts" />
+    <TypeScriptCompile Include="src\app\services\tv-show.service.ts" />
+    <TypeScriptCompile Include="src\app\services\season.service.ts" />
+    <TypeScriptCompile Include="src\app\services\episode.service.ts" />
+    <TypeScriptCompile Include="src\app\services\digital-asset.service.ts" />
+    <TypeScriptCompile Include="src\app\services\index.ts" />
+    <TypeScriptCompile Include="src\app\components\digital-asset-upload.component.ts" />
+    <TypeScriptCompile Include="src\app\components\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\home-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\index.ts" />
+    <TypeScriptCompile Include="src\app\store\tv-show.reducer.ts" />
+    <TypeScriptCompile Include="src\app\store\season.reducer.ts" />
+    <TypeScriptCompile Include="src\app\store\episode.reducer.ts" />
+    <TypeScriptCompile Include="src\app\store\digital-asset.reducer.ts" />
+    <TypeScriptCompile Include="src\app\store\index.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

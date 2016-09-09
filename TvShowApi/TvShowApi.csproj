@@ -204,6 +204,7 @@
     <Compile Include="Filters\HandleError.cs" />
     <Compile Include="Infrastructure\Constants.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Award.cs" />
     <Compile Include="Models\DigitalAsset.cs" />
     <Compile Include="Models\Episode.cs" />
     <Compile Include="Models\EpisodeDigitalAsset.cs" />
@@ -211,6 +212,7 @@
     <Compile Include="Models\Season.cs" />
     <Compile Include="Models\SeasonDigitalAsset.cs" />
     <Compile Include="Models\TvShow.cs" />
+    <Compile Include="Models\TvShowAward.cs" />
     <Compile Include="Models\TvShowDigitalAsset.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
