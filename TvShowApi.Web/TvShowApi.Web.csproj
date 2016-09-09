@@ -317,6 +317,12 @@
     <TypeScriptCompile Include="src\app\store\episode.reducer.ts" />
     <TypeScriptCompile Include="src\app\store\digital-asset.reducer.ts" />
     <TypeScriptCompile Include="src\app\store\index.ts" />
+    <TypeScriptCompile Include="src\app\models\index.ts" />
+    <TypeScriptCompile Include="src\app\models\tv-show.model.ts" />
+    <TypeScriptCompile Include="src\app\models\season.model.ts" />
+    <TypeScriptCompile Include="src\app\models\episode.model.ts" />
+    <TypeScriptCompile Include="src\app\models\award.model.ts" />
+    <TypeScriptCompile Include="src\app\models\digital-asset.model.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>
