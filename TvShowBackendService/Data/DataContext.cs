@@ -6,7 +6,7 @@ namespace TvShowApi.Data
     public class DataContext: DbContext, IDbContext
     {
         public DataContext()
-            : base(nameOrConnectionString: "TvShowApiDataContext")
+            : base(nameOrConnectionString: "TvShowBackendServiceDataContext")
         {
             Configuration.ProxyCreationEnabled = false;
             Configuration.LazyLoadingEnabled = false;
@@ -22,7 +22,18 @@ namespace TvShowApi.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<User>().
 
+                HasMany(u => u.Roles).
+                WithMany(r => r.Users).
+
+                Map(
+                    m =>
+                    {
+                        m.MapLeftKey("User_Id");
+                        m.MapRightKey("Role_Id");
+                        m.ToTable("UserRoles");
+                    });
         } 
     }
 }
